@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>École Arménienne de Lausanne</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+.fade-in{animation:fadeIn 1s ease-in;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+</style>
+
+</head>
+<body class="bg-gray-50 text-gray-800 scroll-smooth">
+
+<!-- HEADER -->
+<header class="bg-red-700 text-white p-6 shadow-md sticky top-0 z-50">
+<div class="max-w-6xl mx-auto flex justify-between items-center">
+<div class="flex items-center gap-3">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg" class="w-8">
+<h1 class="text-xl font-bold">École Arménienne</h1>
+</div>
+<nav class="space-x-4 text-sm">
+<a href="#accueil">Accueil</a>
+<a href="#cours">Cours</a>
+<a href="#galerie">Galerie</a>
+<a href="#inscription">Inscription</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section id="accueil" class="text-center py-20 bg-white fade-in">
+<h2 class="text-4xl font-bold mb-4">Bienvenue</h2>
+<p class="max-w-xl mx-auto">Transmission de la langue et culture arménienne à Lausanne 🇦🇲</p>
+</section>
+
+<!-- COURS -->
+<section id="cours" class="py-16 bg-gray-100 fade-in">
+<div class="max-w-5xl mx-auto px-4">
+<h2 class="text-3xl mb-6">Cours</h2>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="bg-white p-4 rounded-xl shadow hover:scale-105 transition">Langue</div>
+<div class="bg-white p-4 rounded-xl shadow hover:scale-105 transition">Culture</div>
+<div class="bg-white p-4 rounded-xl shadow hover:scale-105 transition">Arts</div>
+</div>
+</div>
+</section>
+
+<!-- GALERIE AVEC VRAIES IMAGES -->
+<section id="galerie" class="py-16 bg-white fade-in">
+<div class="max-w-6xl mx-auto px-4">
+<h2 class="text-3xl mb-6">Galerie</h2>
+<div class="grid md:grid-cols-3 gap-4">
+<img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac" class="rounded-xl">
+<img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" class="rounded-xl">
+<img src="https://images.unsplash.com/photo-1519455953755-af066f52f1ea" class="rounded-xl">
+</div>
+</div>
+</section>
+
+<!-- INSCRIPTION AVEC EMAIL -->
+<section id="inscription" class="py-16 bg-gray-100 fade-in">
+<div class="max-w-5xl mx-auto px-4">
+<h2 class="text-3xl mb-6">Inscription</h2>
+<form action="https://formspree.io/f/your-id" method="POST" class="space-y-4">
+<input name="nom" placeholder="Nom" class="w-full p-3 border rounded-xl" required>
+<input name="email" type="email" placeholder="Email" class="w-full p-3 border rounded-xl" required>
+<textarea name="message" placeholder="Message" class="w-full p-3 border rounded-xl"></textarea>
+<button class="bg-red-700 text-white px-6 py-3 rounded-xl">Envoyer</button>
+</form>
+
+<!-- PAIEMENT PAR VIREMENT BANCAIRE -->
+<div class="mt-10 p-6 bg-white rounded-xl shadow">
+  <h3 class="text-xl font-semibold mb-4">Cotisation (paiement par virement bancaire)</h3>
+  <p class="mb-4">Veuillez effectuer un virement bancaire avec le montant correspondant :</p>
+
+  <ul class="space-y-2 mb-6">
+    <li>👶 1 enfant — <strong>30 CHF</strong></li>
+    <li>👧👦 2 enfants — <strong>50 CHF</strong></li>
+    <li>👨‍👩‍👧‍👦 3 enfants — <strong>70 CHF</strong></li>
+  </ul>
+
+  <div class="bg-gray-100 p-4 rounded-xl text-sm">
+    <p><strong>IBAN :</strong> CH00 0000 0000 0000 0000 0</p>
+    <p><strong>Bénéficiaire :</strong> École Arménienne de Lausanne</p>
+    <p><strong>Banque :</strong> Nom de votre banque</p>
+    <p><strong>Référence :</strong> Nom de l’enfant + cotisation</p>
+  </div>
+
+  <p class="text-sm mt-4">⚠️ Merci d’indiquer clairement le nom de l’enfant dans la référence du paiement.</p>
+</div>
+
+  <p class="text-sm mt-3">⚠️ Remplace chaque lien par tes liens Stripe réels</p>
+</div>
+<p class="text-sm mt-2">⚠️ Remplace "your-id" par ton ID Formspree</p>
+</div>
+</section>
+
+<!-- CONTACT + MAP -->
+<section id="contact" class="py-16 bg-white fade-in">
+<div class="max-w-5xl mx-auto px-4">
+<h2 class="text-3xl mb-6">Contact</h2>
+<p>Email : contact@ecole-armenienne.ch</p>
+<iframe class="w-full h-64 mt-4 rounded-xl" src="https://maps.google.com/maps?q=Lausanne&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+</section>
+
+<!-- LANG SWITCH SIMPLE -->
+<section class="text-center py-6 bg-gray-200">
+<p>🌐 Langues :</p>
+<button onclick="setLang('fr')">FR</button>
+<button onclick="setLang('hy')">Հայ</button>
+<button onclick="setLang('en')">EN</button>
+</section>
+
+<script>
+function setLang(lang){
+alert('Version '+lang+' à compléter (traduction dynamique possible)');
+}
+</script>
+
+<!-- FOOTER -->
+<footer class="bg-gray-800 text-white text-center p-6">
+<p>&copy; 2026 École Arménienne de Lausanne</p>
+</footer>
+
+</body>
+</html>
